@@ -1,4 +1,4 @@
-﻿import haberlerTek
+import haberlerTek
 from gensim.summarization import summarize
 
 
@@ -8,13 +8,13 @@ text =haberlerTek.haberLinki
 try:
     print('Özet: %20')
     yuzdeYirmi = summarize(text)
-    print(yuzdeYirmi)
+    
+    print('\nÖzet: %35')
+    print(summarize(text, ratio=0.35))
 
     print('\nÖzet: %50')
     print(summarize(text, ratio=0.5))
 
-    print('\nÖzet: %35')
-    print(summarize(text, ratio=0.35))
 
     print('\n50 Kelimelik Özet:')
     print(summarize(text, word_count=50))
